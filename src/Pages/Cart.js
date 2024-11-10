@@ -4,7 +4,7 @@ import CartItem from "../Componenets/CartItem";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const {cart} = useSelector((state) => state);
+  const { cart } = useSelector((state) => state);
   const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Cart = () => {
   return (
     <div className="">
       {cart.length > 0 ? (
-        <div className="flex sm:flex-col lg:flex-row justify-between xs:11/12 sm:10/12 md:9/12 lg:w-8/12 mx-auto gap-5">
+        <div className="flex flex-col lg:flex-row justify-between xs:11/12 sm:10/12 md:9/12 lg:w-8/12 mx-auto gap-5">
           <div className="lg:w-8/12 xs:w-full">
             {cart.map((item, index) => {
               return <CartItem key={item.id} item={item} itemIndex={index} />;
