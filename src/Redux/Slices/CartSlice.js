@@ -18,7 +18,7 @@ export const CartSlice = createSlice({
     // Remove from Cart Function for State
     remove: (state, action) => {
       // Filtering i.e. removing item which item.id is match with current state items
-      state.filter((item) => item.id !== action.payload);
+      return state.filter((item) => item.id !== action.payload);
     },
   },
 });

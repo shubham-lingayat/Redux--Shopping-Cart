@@ -4,16 +4,18 @@ import Home from "./Pages/Home";
 import Cart from "./Pages/Cart";
 import Navbar from "./Componenets/Navbar";
 
-function App() {
+const App = () => {
   return (
     <div>
-      <Navbar />
+      <div className="bg-slate-900">
+        <Navbar />
+      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>
   );
-}
+};
 
 export default App;
